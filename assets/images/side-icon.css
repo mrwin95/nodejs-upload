@@ -1,0 +1,20 @@
+.side-icon {
+	    border: solid 1px #777;
+    background: -webkit-linear-gradient(to bottom,#7b5e28,#1f1d1d);
+    background: -o-linear-gradient(to bottom,#7b5e28,#1f1d1d);
+    background: -moz-line
+}
+
+.side-icon {
+	cursor: pointer;
+    position: fixed;
+    top: 75px;
+    left: 165px;
+    width: 10px;
+    height: 30px;
+    padding: 10px 0px 10px 2px;
+    margin: 0px;
+    text-align: center;
+    z-index: 9999;
+}
+}
