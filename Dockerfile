@@ -2,6 +2,8 @@ FROM node:12-alpine
 
 WORKDIR /app
 
+RUN mkdir -p /assets/images
+
 COPY package*.json ./
 
 RUN npm i
