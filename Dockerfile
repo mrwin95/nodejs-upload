@@ -2,7 +2,7 @@ FROM node:12-alpine
 
 WORKDIR /app
 
-#RUN mkdir -p /assets/images
+RUN mkdir -p /assets/images
 
 RUN chown -R node:node /app
 
@@ -16,7 +16,7 @@ RUN npm i
 
 COPY --chown=node:node ./ ./
 
-#VOLUME ["/assets/images"]
+VOLUME ["/assets/images"]
 
 # VOLUME [ "/shareimages" ]
 
