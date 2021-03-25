@@ -22,7 +22,7 @@ RUN ls -al
 
 RUN pwd
 
-RUN cd /assets/images/upload && ls -al
+RUN cd /assets/images && ls -al
 
 EXPOSE 3000
 
