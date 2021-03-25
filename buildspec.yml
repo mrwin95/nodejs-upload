@@ -29,6 +29,8 @@ phases:
       # - npm run build:prod
       - echo Build the Docker image ...
       - ls -la
+      - pwd
+      - chown node:node -R .
       - docker build -t $REPOSITORY_URI:rv1 .
       - echo tag docker image
       - docker tag $REPOSITORY_URI:rv1 $REPOSITORY_URI:$IMAGE_TAG
