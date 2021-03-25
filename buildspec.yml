@@ -31,6 +31,7 @@ phases:
       - ls -la
       - pwd
       - chown node:node -R .
+      - ls -la
       - docker build -t $REPOSITORY_URI:rv1 .
       - echo tag docker image
       - docker tag $REPOSITORY_URI:rv1 $REPOSITORY_URI:$IMAGE_TAG

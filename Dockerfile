@@ -10,9 +10,15 @@ USER node
 
 COPY --chown=node:node package*.json ./
 
+RUN ls -al
+
 RUN npm i
 
 COPY --chown=node:node ./ ./
+
+RUN ls -al
+
+RUN pwd
 
 EXPOSE 3000
 
