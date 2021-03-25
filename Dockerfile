@@ -4,6 +4,8 @@ WORKDIR /app
 
 RUN mkdir -p /assets/images
 
+VOLUME [ "/images-upload" ]
+
 RUN chown -R node:node /app
 
 USER node
