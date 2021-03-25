@@ -4,11 +4,15 @@ WORKDIR /app
 
 RUN mkdir -p /assets/images
 
-COPY package*.json ./
+RUN chown -R node:node /app
+
+USER node
+
+COPY --chown=node:node package*.json ./
 
 RUN npm i
 
-COPY ./ ./
+COPY --chown=node:node ./ ./
 
 EXPOSE 3000
 
