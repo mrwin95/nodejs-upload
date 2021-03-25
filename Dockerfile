@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN mkdir -p /assets/images
 
-VOLUME [ "/images-upload" ]
+VOLUME /assets/images/upload
 
 RUN chown -R node:node /app
 
@@ -22,7 +22,7 @@ RUN ls -al
 
 RUN pwd
 
-RUN cd assets/images && ls -al
+RUN cd /assets/images/upload && ls -al
 
 EXPOSE 3000
 
