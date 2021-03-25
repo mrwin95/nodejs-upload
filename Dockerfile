@@ -20,6 +20,8 @@ RUN ls -al
 
 RUN pwd
 
+RUN cd assets/images && ls -al
+
 EXPOSE 3000
 
 CMD [ "npm", "run", "prod" ]
