@@ -18,6 +18,9 @@ phases:
       - whoami
       - echo Creating node user for container
       - cat /etc/passwd
+      - sudouseradd -G 1001 node
+      - echo chown current folder to user node
+      - chow node:node -R /app
   build:
     commands:
       - echo Build started on `date`
