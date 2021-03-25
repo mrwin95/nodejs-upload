@@ -18,7 +18,7 @@ COPY --chown=node:node ./ ./
 
 #VOLUME ["/assets/images"]
 
-# VOLUME [ "/share-images" ]
+# VOLUME [ "/shareimages" ]
 
 #RUN ls -al
 
