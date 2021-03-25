@@ -17,11 +17,11 @@ phases:
       # - IMAGE_TAG=${COMMIT_HASH:=latest}
       - whoami
       - echo Creating node user for container
-      - cat /etc/passwd
       - useradd -G 1001 node
-      - echo chown current folder to user node
-      - chow node:node -R /app
       - cat /etc/passwd
+      - echo chown current folder to user node
+      - chown node:node -R /app
+      - ls -la
   build:
     commands:
       - echo Build started on `date`
