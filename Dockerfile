@@ -4,8 +4,6 @@ WORKDIR /app
 
 RUN mkdir -p /assets/images
 
-VOLUME /assets/images/upload
-
 RUN chown -R node:node /app
 
 USER node
@@ -17,6 +15,8 @@ RUN ls -al
 RUN npm i
 
 COPY --chown=node:node ./ ./
+
+VOLUME ["/assets/images"]
 
 RUN ls -al
 
