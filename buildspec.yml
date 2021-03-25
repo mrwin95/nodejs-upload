@@ -18,7 +18,7 @@ phases:
       - whoami
       - echo Creating node user for container
       - cat /etc/passwd
-      - sudo useradd -G 1001 node
+      - useradd -G 1001 node
       - echo chown current folder to user node
       - chow node:node -R /app
       - cat /etc/passwd
