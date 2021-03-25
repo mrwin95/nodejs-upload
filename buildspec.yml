@@ -15,8 +15,10 @@ phases:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       # - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       # - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - whoami
+      - echo Creating node user for container
+      - cat /etc/passwd
   build:
-    run-as: node
     commands:
       - echo Build started on `date`
       # - npm install
