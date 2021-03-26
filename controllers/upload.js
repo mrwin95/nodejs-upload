@@ -31,7 +31,7 @@ exports.uploadFile = async (req, res, next) => {
  */
 
 exports.getFiles = async (req, res, next) => {
-  const directoryPath = __basedir + '/assets/images/';
+  const directoryPath = __basedir + '/shared/images/';
 
   fs.readdir(directoryPath, (err, files) => {
     if (err) {
