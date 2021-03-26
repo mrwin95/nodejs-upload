@@ -10,7 +10,7 @@ USER node
 
 COPY --chown=node:node package*.json ./
 
-RUN ls -al
+#RUN ls -al
 
 RUN npm i
 
@@ -18,11 +18,13 @@ COPY --chown=node:node ./ ./
 
 VOLUME ["/assets/images"]
 
-RUN ls -al
+# VOLUME [ "/shareimages" ]
 
-RUN pwd
+#RUN ls -al
 
-RUN cd /assets/images && ls -al
+#RUN pwd
+
+#RUN cd /assets/images && ls -al
 
 EXPOSE 3000
 

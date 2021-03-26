@@ -20,7 +20,7 @@ exports.uploadFile = async (req, res, next) => {
       return res.status(400).send({ message: 'Please upload a file' })
     }
 
-    res.status(200).send({ message: 'File Upload successfully ' + req.file })
+    res.status(200).send({ message: 'File Upload successfully ' + req.file.originalname })
   } catch (err) {
     res.status(500).send({ message: `Could not upload the file ${__basedir}, ${err}` })
   }
